@@ -1,0 +1,10 @@
+#titulo {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+#descripcion {
+    width: 250px;
+    overflow: scroll;
+}
