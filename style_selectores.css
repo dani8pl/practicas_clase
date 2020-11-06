@@ -1,0 +1,113 @@
+main p {
+    color: brown;
+}
+
+
+/*Hijos directos
+Hijos directos de section seran blue*/
+
+section>p {
+    color: blue;
+}
+
+
+/*Despues de h1, el p me lo pones verde, pero solo ese, el siguiente ya no*/
+
+h1+p {
+    color: green;
+}
+
+
+/*Virculilla: Selector anterior
+ALT+4+Espacio Es como el de antes pero ahora pinta todos los p siguientes, no solo el siguiente*/
+
+h1~p {
+    color: indigo;
+}
+
+
+/*Selector de clase para elementos concretos*/
+
+p.mitexto {
+    font-size: x-large;
+    color: lawngreen;
+}
+
+
+/*METODO ATRIBUTOS:
+Marcamos entre corchetes el atributo,
+name, ckecked...
+Ejemplo:
+p[name="frase4"]*/
+
+p[name="frase4"] {
+    font-size: 20px;
+}
+
+
+/*METODOS CON VIRCULILLA*/
+
+
+/*1. Todo lo que contiene mi, como palabra sola*/
+
+p[name~="mi"] {
+    font-size: 30px;
+}
+
+
+/*2. Todo lo que empieza por mi*/
+
+p[name^="mi"] {
+    font-size: 40px;
+}
+
+
+/*3.Todo lo que termina por mi*/
+
+p[name$="mi"] {
+    font-size: 50px;
+}
+
+
+/*4.Todo lo que contiene la secuencia mi*/
+
+p[name*="mi"] {
+    font-size: 70px;
+}
+
+
+/*PSEUDOCLASES : La condicion es que tienen que ser hermanos,
+Para listas por ejemplo, pero vale para más*/
+
+li:nth-child(2) {
+    font-size: 20px;
+}
+
+li:first-child {
+    color: green;
+    background-color: indianred;
+}
+
+li:last-child {
+    font-size: 15px;
+    color: lawngreen;
+}
+
+
+/*Solo se activa cuando hay un solo elemento, no varios hermanos,
+ahora en nuestro caso no se activará*/
+
+li:only-child {
+    color: hotpink;
+}
+
+
+/*Tambien para pintar mas rapido en lista, usamos los atributos:
+odd y even ( para e impar ), en lugar de ir poniendo,
+1,2,3,4,5,6,...*/
+
+
+/*Negacion de algo
+:not(atributo)
+:not(clase)
+*/
